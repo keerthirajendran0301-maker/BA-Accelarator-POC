@@ -39,8 +39,8 @@ if st.button ("Generate FRD"):
   elif not raw_notes:
      st.error("Please paste some meeting notes to process.")
   else:
-  with st.spinner("Analyzing notes and drafting FRD..."):
-    try:
+       with st.spinner("Analyzing notes and drafting FRD..."):
+         try:
       #Connect to the AI Model
       genai.configure(api_key=api_key)
       model = genai.GenerativeModel(
