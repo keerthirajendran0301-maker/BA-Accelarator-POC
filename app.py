@@ -55,5 +55,5 @@ if st.button ("Generate FRD"):
              st.markdown("_ _ _")
              st.markdown(response.text)
 
-except Exception as e:
-     st.error(f"An error occured: {e}")
+          except Exception as e:
+            st.error(f"An error occured: {e}")
