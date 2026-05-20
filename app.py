@@ -36,7 +36,7 @@ raw_notes = st.text_area(" Paste Stakeholder Meeting Notes Here:", height=200)
 if st.button ("Generate FRD"):
   if not api_key:
     st.error("Please enter your API key in the sidebar first.")
-  elif not raw notes:
+  elif not raw_notes:
   st.error("Please paste some meeting notes to process.")
   else:
   with st.spinner("Analyzing notes and drafting FRD..."):
