@@ -48,8 +48,8 @@ if st.button ("Generate FRD"):
                   system_instruction=sys_prompt
       )
              # Get the response and display it
-            response = model.generate_content(raw_notes)
-            st.success("Draft Complete!")
+             response = model.generate_content(raw_notes)
+             st.success("Draft Complete!")
      
              #Display the document
              st.markdown("_ _ _")
