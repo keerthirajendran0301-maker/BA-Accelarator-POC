@@ -40,16 +40,16 @@ if st.button ("Generate FRD"):
      st.error("Please paste some meeting notes to process.")
   else:
        with st.spinner("Analyzing notes and drafting FRD..."):
-         try:
-             genai.configure(api_key=api_key)
-             model = genai.GenerativeModel(
-                 model_name="gemini-1.5-pro",
-                 system_instruction=sys_prompt
-             )
-             response = model.generate_content(raw_notes)
-             st.success("Draft Complete!")
-             st.markdown("---")
-             st.markdown(response.text)
+            try:
+                genai.configure(api_key=api_key)
+                model = genai.GenerativeModel(
+                    model_name="gemini-1.5-pro",
+                    system_instruction=sys_prompt
+                )
+                response = model.generate_content(raw_notes)
+                st.success("Draft Complete!")
+                st.markdown("---")
+                st.markdown(response.text)
       
-          except Exception as e:
-             st.error(f"An error occured: {e}")
+            except Exception as e:
+                st.error(f"An error occured: {e}")
