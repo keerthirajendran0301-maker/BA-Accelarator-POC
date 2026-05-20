@@ -43,7 +43,7 @@ if st.button ("Generate FRD"):
             try:
                 genai.configure(api_key=api_key)
                 model = genai.GenerativeModel(
-                    model_name="gemini-pro",
+                    model_name="gemini-3.5-flash",
                     system_instruction=sys_prompt
                 )
                 response = model.generate_content(raw_notes)
