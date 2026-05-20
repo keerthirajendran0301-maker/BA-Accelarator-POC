@@ -43,6 +43,7 @@ if st.button ("Generate FRD"):
     try:
       #Connect to the AI Model
       genai.configure(api_key=api_key)
+      model = genai.GenerativeModel(
       model_name="gemini-1.5-pro",
       system_instruction=sys_prompt
       )
