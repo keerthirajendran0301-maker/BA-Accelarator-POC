@@ -41,22 +41,19 @@ if st.button ("Generate FRD"):
   else:
        with st.spinner("Analyzing notes and drafting FRD..."):
          try:
-      #Connect to the AI Model
-      genai.configure(api_key=api_key)
-      model = genai.GenerativeModel(
-      model_name="gemini-1.5-pro",
-      system_instruction=sys_prompt
+             #Connect to the AI Model
+             genai.configure(api_key=api_key)
+             model = genai.GenerativeModel(
+                  model_name="gemini-1.5-pro",
+                  system_instruction=sys_prompt
       )
-      
-      # Get the response and display it
-      response = model.generate_content(raw_notes)
-      st.success("Draft Complete!")
-      # Get the response and display it
-      response = model.generate_content(raw_notes)
-      st.success("raft Complete!")
-      #Display the document
-      st.markdown("_ _ _")
-      st.markdown(response.text)
+             # Get the response and display it
+            response = model.generate_content(raw_notes)
+            st.success("Draft Complete!")
+     
+             #Display the document
+             st.markdown("_ _ _")
+             st.markdown(response.text)
 
 except Exception as e:
-st.error(f"An error occured: {e}")
+     st.error(f"An error occured: {e}")
