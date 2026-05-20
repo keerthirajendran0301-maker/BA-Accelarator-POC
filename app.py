@@ -52,8 +52,7 @@ if st.button ("Generate FRD"):
              st.success("Draft Complete!")
      
              #Display the document
-             st.markdown("_ _ _")
+             st.markdown("---")
              st.markdown(response.text)
-
-             except Exception as e:
-               st.error(f"An error occured: {e}")
+          except Exception as e:
+             st.error(f"An error occured: {e}")
