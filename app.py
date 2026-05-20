@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 # Set up the visual layout of the app
 st.set_page_config(page_title="BA Accelerator POC", layout="wide")
-st.title("AI Business nalyst Accelerator")
+st.title("AI Business Analyst Accelerator")
 st.write ("Convert messy stakeholder notes into a structured Functional Requirements Document (FRD).")
 
 # Securly ask for the PI key in the sidebar (so it isn't hardcoded)
